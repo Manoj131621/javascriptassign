@@ -1,0 +1,27 @@
+
+<font color="brown" style="font-family:Times New Roman,Georgia,Serif;">
+    <b>Select Your Option</b>
+</font>
+<select name="opt" id="opt">
+    <option value="0">Hours to minutes</option>
+    <option value="1">Hours to Seconds</option>
+    <option value="2">minutes to Hours</option>
+    <option value="3">minutes to Seconds</option>
+    <option value="4">Seconds to hours</option>
+    <option value="5">seconds to minutes</option>
+</select><br><br>
+<div style="padding-left:80px;">
+    <font style="font-family:Times New Roman,Georgia,Serif;">
+        Input:
+    </font>
+    <input type="text" name="field1" id="field1" onkeypress="return isNumberKey(event)">
+</div>
+<br>
+<div style="padding-left:70px;">
+    <font style="font-family:Times New Roman,Georgia,Serif;">
+        Output:
+    </font>
+    <input type="text" name="field2" id="field2"
+        onkeypress="return stop()">
+</div><br>
+<input type="button" value="convert" onclick="calculate()">

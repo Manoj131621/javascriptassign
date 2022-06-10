@@ -1,0 +1,62 @@
+<script type="text/javascript">
+    function checkleapyear(datea) {
+        datea = parseInt(datea); 
+        if (datea % 4 == 0) 
+        {
+            if (datea % 100 != 0) 
+            {
+                return true;
+            }
+            else 
+            {
+                if (datea % 400 == 0)
+                    return true;
+                else
+                    return false;
+            }
+        }
+        return false;
+    }
+    function isLeapYear() 
+    {
+        var df = document.sd.yv.value;
+        if (df != "" && parseInt(df)) 
+        {
+            var res = checkleapyear(df);
+            if (res) 
+            {
+                document.sd.val.style.color = "green";
+                document.sd.val.value = df + " is a leap year";
+            }
+            else 
+            {
+                document.sd.val.style.color = "#9a235d";
+                document.sd.val.value = df + " is not a leap year";
+                document.sd.val.value = df + " is not a leap year";
+            }
+        }
+        else 
+        {
+            alert("Enter a proper value");
+        }
+        return false;
+    }
+    function isInteger(s) {
+        var i;
+        s = s.toString();
+        for (i = 0; i < s.length; i++) {
+            var c = s.charAt(i);
+            if (isNaN(c)) {
+                alert("Given value is not a number");
+                return false;
+            }
+        } return true;
+    }
+</script>
+<form name=sd method=post action="" onsubmit="return isLeapYear()">
+    Enter a year [ ex: 2020 ] - 
+    <input name=yv type=text onKeyup="isInteger(this.value)">
+    <input type=submit value=go><br>
+    <input type=text name=val size=30 style="background-color:white; border:0px; margin:0px; color: #9a235d;" readonly>
+</form>
+<!-- Script by hscripts.com -->
